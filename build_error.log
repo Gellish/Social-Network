@@ -1,0 +1,15 @@
+
+> build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 1 modules transformed.
+x Build failed in 29ms
+error during build:
+[vite-plugin-svelte:load-custom] Could not load D:/Github/Social-Network/resources/js/components/ChatApp.svelte (imported by resources/js/app.js): Cannot read properties of undefined (reading 'config')
+    at Object.handler (file:///D:/Github/Social-Network/node_modules/@sveltejs/vite-plugin-svelte/src/plugins/load-custom.js:24:37)
+    at file:///D:/Github/Social-Network/node_modules/rollup/dist/es/shared/node-entry.js:22548:40
+    at async PluginDriver.hookFirstAndGetPlugin (file:///D:/Github/Social-Network/node_modules/rollup/dist/es/shared/node-entry.js:22430:28)
+    at async file:///D:/Github/Social-Network/node_modules/rollup/dist/es/shared/node-entry.js:21422:33
+    at async Queue.work (file:///D:/Github/Social-Network/node_modules/rollup/dist/es/shared/node-entry.js:22658:32)

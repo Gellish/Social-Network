@@ -1,66 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Social Network
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern Social Network application built with **Laravel 11** and **Svelte**, featuring real-time chat, user profiles, and a dynamic feed.
 
-## About Laravel
+![Dashboard Preview](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **User Authentication**: Secure login and registration.
+-   **Dynamic News Feed**: Post updates, like, and comment on friends' posts.
+-   **User Profiles**:
+    -   Customizable header and profile pictures.
+    -   Displays verified follower/following counts.
+    -   Edit profile details (Overview, Experience, Education).
+-   **Search Functionality**:
+    -   Find users by name or username.
+    -   Grid view results with "Follow" and "Message" actions.
+-   **Messenger-Style Chat** (New!):
+    -   Built with **Svelte** for a seamless, reactive experience.
+    -   Real-time messaging UI.
+    -   Contact list with online/unread status indicators.
+    -   Facebook-like chat bubbles.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
 
-## Learning Laravel
+-   **Backend**: Laravel 11, PHP 8.2+, MySQL
+-   **Frontend**: Svelte, Blade Templates, Bootstrap 5, Vanilla CSS
+-   **Build Tool**: Vite (configured for hybrid Blade/Svelte support)
+-   **Real-time**: Pusher (configurable) / Laravel Echo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📦 Installation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Gellish/Social-Network.git
+    cd Social-Network
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2.  **Install PHP Dependencies**
+    ```bash
+    composer install
+    ```
 
-## Laravel Sponsors
+3.  **Install Frontend Dependencies**
+    ```bash
+    npm install
+    # Note: If you encounter dependency issues, try:
+    # npm install --legacy-peer-deps
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4.  **Configure Environment**
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+    *Update your `.env` file with your database credentials.*
 
-### Premium Partners
+5.  **Run Migrations & Seeders**
+    ```bash
+    php artisan migrate --seed
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+6.  **Build Assets**
+    ```bash
+    npm run build
+    ```
 
-## Contributing
+7.  **Serve Application**
+    ```bash
+    php artisan serve
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🗺️ Roadmap
 
-## Code of Conduct
+We have exciting plans for the future of this project! Here is what we are working on:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   [ ] **Real-time Notifications**: Instant alerts for likes, comments, and new followers.
+-   [ ] **Group Chats**: Create channels for multiple users to chat together.
+-   [ ] **Media Sharing in Chat**: Send images and files in conversations.
+-   [ ] **Dark Mode**: System-wide dark theme toggle.
+-   [ ] **Mobile App**: Native mobile wrapper (using Capacitor or React Native).
+-   [ ] **Stories/Status Updates**: 24-hour temporary posts.
 
-## Security Vulnerabilities
+## 🔧 Future Improvements & Optimization
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   **Testing**: Implement comprehensive PHPUnit (Backend) and Vitest (Frontend) test suites to ensure stability.
+-   **Caching**: Optimize database queries using Redis for caching frequently accessed data (e.g., feed, user counts).
+-   **Docker Support**: Add `Dockerfile` and `docker-compose.yml` for easier containerized deployment.
+-   **API Development**: Expose a RESTful or GraphQL API for third-party integrations or mobile apps.
+-   **Code Refactoring**: Continue modernizing legacy code to fully utilize Laravel 11 features (e.g., Service classes, DTOs).
 
-## License
+## 📄 License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
